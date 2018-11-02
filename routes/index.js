@@ -20,7 +20,7 @@ router.get('/iris', function(req, res) {
   // configuration to be used in the brain
   const config = {
     iterations: 1000,
-    momentum: 0.01,
+    momentum: 0.5,
     learningRate: 0.1,
     binaryThresh: 0.5, // arbitary value
     hiddenLayers: [3], // the size of the hidden layers in the network
@@ -34,7 +34,7 @@ router.get('/iris', function(req, res) {
   const net = new brain.NeuralNetwork(config)
 
   // load each line of the training data into a new index of an array
-  var trainingFile = fs.readFileSync("data.csv").toString().split("\n")
+  var trainingFile = fs.readFileSync("iris.csv").toString().split("\n")
 
   // iterate over each line of the training data, adding it to a new array for training later
   for (var i = 0; i < trainingFile.length; i++) {
@@ -72,11 +72,11 @@ router.get('/poker', function(req, res) {
   
     // configuration to be used in the brain
     const config = {
-      iterations: 1000,
-      momentum: 0.1,
-      learningRate: 0.3,
-      binaryThresh: 0.5, // arbitary value
-      hiddenLayers: [10], // the size of the hidden layers in the network
+      iterations: 224,
+      momentum: 0.0001,
+      learningRate: 0.1,
+      binaryThresh: 0.02, // arbitary value
+      hiddenLayers: [12], // the size of the hidden layers in the network
       activation: 'sigmoid' // activation function
     }
   
@@ -97,34 +97,34 @@ router.get('/poker', function(req, res) {
       var points = [ parseInt(values[0]), parseInt(values[1]), parseInt(values[2]), parseInt(values[3]), parseInt(values[4]), parseInt(values[5]), parseInt(values[6]), parseInt(values[7]), parseInt(values[8]), parseInt(values[9])  ]
      
       if(parseInt(values[10]) == 9) {
-        trainingData.push({input: points, output: {Royal_flush: 1}})
+        trainingData.push({input: points, output: {Royal_flush_9: 1}})
       }
       else if (parseInt(values[10]) == 8) {
-        trainingData.push({input: points, output: {Straight_flush: 1}})
+        trainingData.push({input: points, output: {Straight_flush_8: 1}})
       }
       else if (parseInt(values[10]) == 7) {
-        trainingData.push({input: points, output: {Four_of_a_kind: 1}})
+        trainingData.push({input: points, output: {Four_of_a_kind_7: 1}})
       }
       else if (parseInt(values[10]) == 6) {
-        trainingData.push({input: points, output: {Full_house: 1}})
+        trainingData.push({input: points, output: {Full_house_6: 1}})
       }
       else if (parseInt(values[10]) == 5) {
-        trainingData.push({input: points, output: {Flush: 1}})
+        trainingData.push({input: points, output: {Flush_5: 1}})
       }
       else if (parseInt(values[10]) == 4) {
-        trainingData.push({input: points, output: {Straight: 1}})
+        trainingData.push({input: points, output: {Straight_4: 1}})
       }
       else if (parseInt(values[10]) == 3) {
-        trainingData.push({input: points, output: {Three_of_a_kind: 1}})
+        trainingData.push({input: points, output: {Three_of_a_kind_3: 1}})
       }
       else if (parseInt(values[10]) == 2) {
-        trainingData.push({input: points, output: {Two_pairs: 1}})
+        trainingData.push({input: points, output: {Two_pairs_2: 1}})
       }
       else if (parseInt(values[10]) == 1) {
-        trainingData.push({input: points, output: {One_pair: 1}})
+        trainingData.push({input: points, output: {One_pair_1: 1}})
       }
       else if (parseInt(values[10]) == 0) {
-        trainingData.push({input: points, output: {Nothing: 1}})
+        trainingData.push({input: points, output: {Nothing_0: 1}})
       }
  
     }
@@ -133,7 +133,7 @@ router.get('/poker', function(req, res) {
     net.train(trainingData, {
       log: true
     })
-  
+    
     // test data - actually virginica
     const lista_teste = []
 
@@ -144,15 +144,15 @@ router.get('/poker', function(req, res) {
     lista_teste[4] = [3,13,3,10,1,1,1,11,3,12,4]
     lista_teste[5] = [4,10,4,12,4,9,4,1,4,13,5]
 
-    const result_teste = ['One_pair', 'Nothing', 'Two_pairs', 'Three_of_a_kind', 'Straight', 'Flush']
+    //const result_teste = ['One_pair', 'Nothing', 'Two_pairs', 'Three_of_a_kind', 'Straight', 'Flush']
     const results = []
 
     for (var i = 0; i < lista_teste.length; i++) {
       results[i] = net.run(lista_teste[i])
     }
-  
-    return res.json(results);
-  });
+
+  return res.json(results);
+});
   
 
 
