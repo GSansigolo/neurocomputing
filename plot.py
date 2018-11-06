@@ -2,7 +2,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 
-df = pd.read_csv('results/poker2.csv')
+df = pd.read_csv('results/zoo2.csv')
 t = df['inte']
 s = df['erro']
 
