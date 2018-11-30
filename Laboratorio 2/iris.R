@@ -13,9 +13,9 @@ colnames(iris)
 
 #---------------------
 # SOM 1 Config
-#---------------------
+#---------------------                               sqrt[sqrt(rows*colums)]
 iris.teste1 <- c("sepal_length", "sepal_width", "petal_length", "petal_width")
-iris.SOM1 <- som(scale(iris[iris.teste1 ]), grid = somgrid(6, 4, "rectangular"))
+iris.SOM1 <- som(scale(iris[iris.teste1 ]), grid = somgrid(5, 5, "rectangular"))
 
 #---------------------
 # Plots
@@ -29,7 +29,7 @@ iris.SOM1 <- som(scale(iris[iris.teste1 ]), grid = somgrid(6, 4, "rectangular"))
 # Heat Plot
 #plot(iris.SOM1, type = "counts", palette.name = colors, heatkey = TRUE)
 
-# Toroidal Plot
+# Toroidal Plot                         
 par(mfrow = c(1, 2))
 plot(iris.SOM1, type = "mapping", pchs = 20, main = "Mapping Type SOM")
 plot(iris.SOM1, main = "SOM Plot")
@@ -45,8 +45,15 @@ iris.testing <- scale(iris[-training_indices, iris.teste2], center = attr(iris.t
                                                                           "scaled:center"), scale = attr(iris.training, "scaled:scale"))
 
 iris.SOM2 <- xyf(scale(iris[, iris.teste2]), classvec2classmat(iris[, "species"]), 
-                grid = somgrid(6, 4, "hexagonal"), rlen = 300)
+                grid = somgrid(5, 5, "hexagonal"), rlen = 300)
 
 # Predictions
 par(mfrow = c(1, 2))
 plot(iris.SOM2, type = "codes", main = c("Codes X", "Codes Y"))
+
+## use hierarchical clustering to cluster the codebook vectors
+groups = 3
+iris.hc = cutree(hclust(dist(iris.som$codes)), groups)
+
+#cluster boundaries
+add.cluster.boundaries(iris.som, iris.hc)
