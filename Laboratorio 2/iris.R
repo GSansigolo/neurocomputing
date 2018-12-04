@@ -51,9 +51,3 @@ iris.SOM2 <- xyf(scale(iris[, iris.teste2]), classvec2classmat(iris[, "species"]
 par(mfrow = c(1, 2))
 plot(iris.SOM2, type = "codes", main = c("Codes X", "Codes Y"))
 
-## use hierarchical clustering to cluster the codebook vectors
-groups = 3
-iris.hc = cutree(hclust(dist(iris.som$codes)), groups)
-
-#cluster boundaries
-add.cluster.boundaries(iris.som, iris.hc)
