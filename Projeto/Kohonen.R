@@ -1,16 +1,17 @@
-##Libraries
+#Declare libraries
 library(sits)
 library(kohonen)
 library(inSitu)
 
-##Import
+#Import file 'br_mt_1_8K_9classes_6bands.rda'
 data.tb <- load(file = "/home/sansigolo/Documents/git/Neurocomputing/Projeto/br_mt_1_8K_9classes_6bands.rda")
 data.tb <- br_mt_1_8K_9classes_6bands
 
 #Get time series
 time_series.ts <- sits_values (data.tb, format = "bands_cases_dates")
+write.csv(time_series.ts, file = "time_seriests.csv")
 
-##To use the DTW distance
+#To use the DTW distance
 #sourceCpp(paste(path.package("sits"), "inst/Distances/distance.cpp", sep = "/"))
 
 #Create cluster with Self-organizing maps (kohonen)
