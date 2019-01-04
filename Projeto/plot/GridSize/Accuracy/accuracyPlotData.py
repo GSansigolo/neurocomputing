@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-data_a = [[0.9212, 0.9128, 0.917, 0.9212]]
+data_a = [[0.9212,0.9128,0.917,0.9212,0.9212,0.9128,0.917,0.9212,0.9244,0.9186]]
 #data_b = [[6,4,2]]
 #data_c = [[5,4,1]]
 #data_d = [[5,4,3]]
@@ -81,6 +81,6 @@ plt.legend()
 
 plt.xticks(range(0, len(ticks) * 2, 2), ticks)
 plt.xlim(-2, len(ticks)*2)
-plt.ylim(0.9, 1)
+plt.ylim(0.91, 0.97)
 plt.tight_layout()
 plt.savefig('boxcompare.png')
