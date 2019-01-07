@@ -20,8 +20,8 @@ koh <-
     sits::sits_kohonen(
         data.tb,
         time_series.ts,
-        grid_xdim = 10,
-        grid_ydim = 10,
+        grid_xdim = 14,
+        grid_ydim = 14,
         rlen = 100,
         dist.fcts = "euclidean",
         neighbourhood.fct = "gaussian"
