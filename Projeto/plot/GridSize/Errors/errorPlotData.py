@@ -4,7 +4,7 @@ import numpy as np
 data_a = [[20,20,21,18,16,23,22,19,19,16]]
 data_b = [[19,23,21,24,16,23,22,21,23,20]]
 data_c = [[18,16,17,18,19,21,18,21,21,22]]
-data_d = [[20,23,20,19,19,23,18]]
+data_d = [[20,23,20,19,19,24,18,17,18,19]]
 #data_e = [[3,1,5]]
 #data_f = [[2,4,6]]
 #data_g = [[1,2,5]]
@@ -46,8 +46,7 @@ bpt = plt.boxplot(data_d, positions=np.array(range(len(data_d)))*2.0+3.6, sym=''
 set_box_color(bpl, '#D7191C') 
 set_box_color(bpr, '#2C7BB6')
 set_box_color(bps, '#2ca25f') 
-set_box_color(bpr, '#8856a7')
-#set_box_color(bpt, '#43a2ca')
+set_box_color(bpt, '#8856a7')
 #set_box_color(bpu, '#a6bddb')
 #set_box_color(bpv, '#2b8cbe')
 #set_box_color(bpx, '#1c9099')
@@ -81,6 +80,6 @@ plt.legend()
 
 plt.xticks(range(0, len(ticks) * 2, 2), ticks)
 plt.xlim(-2, len(ticks)*2)
-plt.ylim(0, 25)
+plt.ylim(0, 26)
 plt.tight_layout()
 plt.savefig('boxcompare.png')

@@ -4,7 +4,7 @@ import numpy as np
 data_a = [[0.9212,0.9128,0.917,0.9212,0.9212,0.9128,0.917,0.9212,0.9244,0.9186]]
 data_b = [[0.9255,0.9249,0.9228,0.9339,0.9186,0.9239,0.9323,0.9276,0.9355,0.9234]]
 data_c = [[0.9387,0.9371,0.9408,0.9329,0.9397,0.9345,0.9292,0.9477,0.9434,0.9255]]
-data_d = [[0.9397,0.9403,0.9392,0.9477,0.9434,0.9424,0.9487]]
+data_d = [[0.9397,0.9403,0.9392,0.9477,0.9434,0.9424,0.9487,0.9434,0.9424,0.944]]
 #data_e = [[3,1,5]]
 #data_f = [[2,4,6]]
 #data_g = [[1,2,5]]
@@ -46,8 +46,7 @@ bpt = plt.boxplot(data_d, positions=np.array(range(len(data_d)))*2.0+3.6, sym=''
 set_box_color(bpl, '#D7191C') 
 set_box_color(bpr, '#2C7BB6')
 set_box_color(bps, '#2ca25f') 
-set_box_color(bpr, '#8856a7')
-#set_box_color(bpt, '#43a2ca')
+set_box_color(bpt, '#8856a7')
 #set_box_color(bpu, '#a6bddb')
 #set_box_color(bpv, '#2b8cbe')
 #set_box_color(bpx, '#1c9099')
