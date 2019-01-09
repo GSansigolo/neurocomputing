@@ -3,8 +3,8 @@ import numpy as np
 
 data_a = [[20,20,21,18,16,23,22,19,19,16]]
 data_b = [[19,23,21,24,16,23,22,21,23,20]]
-#data_c = [[5,4,1]]
-#data_d = [[5,4,3]]
+data_c = [[18,16,17,18,19,21,18,21,21,22]]
+data_d = [[20,23,20,19,19,23,18]]
 #data_e = [[3,1,5]]
 #data_f = [[2,4,6]]
 #data_g = [[1,2,5]]
@@ -29,8 +29,8 @@ plt.figure()
 
 bpl = plt.boxplot(data_a, positions=np.array(range(len(data_a)))*2.0-1.0, sym='', widths=0.8)
 bpr = plt.boxplot(data_b, positions=np.array(range(len(data_b)))*2.0+0.5, sym='', widths=0.8)
-#bps = plt.boxplot(data_c, positions=np.array(range(len(data_c)))*2.0+2.0, sym='', widths=0.8)
-#bpt = plt.boxplot(data_d, positions=np.array(range(len(data_d)))*2.0+3.6, sym='', widths=0.8)
+bps = plt.boxplot(data_c, positions=np.array(range(len(data_c)))*2.0+2.0, sym='', widths=0.8)
+bpt = plt.boxplot(data_d, positions=np.array(range(len(data_d)))*2.0+3.6, sym='', widths=0.8)
 #bpu = plt.boxplot(data_e, positions=np.array(range(len(data_f)))*2.0+5.2, sym='', widths=0.8)
 #bpv = plt.boxplot(data_f, positions=np.array(range(len(data_f)))*2.0+6.8 , sym='', widths=0.8)
 #bpx = plt.boxplot(data_g, positions=np.array(range(len(data_g)))*2.0+8.4, sym='', widths=0.8)
@@ -45,8 +45,8 @@ bpr = plt.boxplot(data_b, positions=np.array(range(len(data_b)))*2.0+0.5, sym=''
 
 set_box_color(bpl, '#D7191C') 
 set_box_color(bpr, '#2C7BB6')
-#set_box_color(bps, '#2ca25f') 
-#set_box_color(bpr, '#8856a7')
+set_box_color(bps, '#2ca25f') 
+set_box_color(bpr, '#8856a7')
 #set_box_color(bpt, '#43a2ca')
 #set_box_color(bpu, '#a6bddb')
 #set_box_color(bpv, '#2b8cbe')
@@ -63,8 +63,8 @@ set_box_color(bpr, '#2C7BB6')
 # draw temporary red and blue lines and use them to create a legend
 plt.plot([], c='#D7191C', label='10x10')
 plt.plot([], c='#2C7BB6', label='12x12')
-#plt.plot([], c='#2ca25f', label='ABC3')
-#plt.plot([], c='#8856a7', label='ABC4')
+plt.plot([], c='#2ca25f', label='14x14')
+plt.plot([], c='#8856a7', label='16x16')
 #plt.plot([], c='#43a2ca', label='ABC5')
 #plt.plot([], c='#a6bddb', label='ABC6')
 #plt.plot([], c='#2b8cbe', label='ABC7')

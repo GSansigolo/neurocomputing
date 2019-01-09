@@ -3,8 +3,8 @@ import numpy as np
 
 data_a = [[0.9212,0.9128,0.917,0.9212,0.9212,0.9128,0.917,0.9212,0.9244,0.9186]]
 data_b = [[0.9255,0.9249,0.9228,0.9339,0.9186,0.9239,0.9323,0.9276,0.9355,0.9234]]
-#data_c = [[5,4,1]]
-#data_d = [[5,4,3]]
+data_c = [[0.9387,0.9371,0.9408,0.9329,0.9397,0.9345,0.9292,0.9477,0.9434,0.9255]]
+data_d = [[0.9397,0.9403,0.9392,0.9477,0.9434,0.9424,0.9487]]
 #data_e = [[3,1,5]]
 #data_f = [[2,4,6]]
 #data_g = [[1,2,5]]
@@ -29,8 +29,8 @@ plt.figure()
 
 bpl = plt.boxplot(data_a, positions=np.array(range(len(data_a)))*2.0-1.0, sym='', widths=0.8)
 bpr = plt.boxplot(data_b, positions=np.array(range(len(data_b)))*2.0+0.5, sym='', widths=0.8)
-#bps = plt.boxplot(data_c, positions=np.array(range(len(data_c)))*2.0+2.0, sym='', widths=0.8)
-#bpt = plt.boxplot(data_d, positions=np.array(range(len(data_d)))*2.0+3.6, sym='', widths=0.8)
+bps = plt.boxplot(data_c, positions=np.array(range(len(data_c)))*2.0+2.0, sym='', widths=0.8)
+bpt = plt.boxplot(data_d, positions=np.array(range(len(data_d)))*2.0+3.6, sym='', widths=0.8)
 #bpu = plt.boxplot(data_e, positions=np.array(range(len(data_f)))*2.0+5.2, sym='', widths=0.8)
 #bpv = plt.boxplot(data_f, positions=np.array(range(len(data_f)))*2.0+6.8 , sym='', widths=0.8)
 #bpx = plt.boxplot(data_g, positions=np.array(range(len(data_g)))*2.0+8.4, sym='', widths=0.8)
@@ -45,8 +45,8 @@ bpr = plt.boxplot(data_b, positions=np.array(range(len(data_b)))*2.0+0.5, sym=''
 
 set_box_color(bpl, '#D7191C') 
 set_box_color(bpr, '#2C7BB6')
-#set_box_color(bps, '#2ca25f') 
-#set_box_color(bpr, '#8856a7')
+set_box_color(bps, '#2ca25f') 
+set_box_color(bpr, '#8856a7')
 #set_box_color(bpt, '#43a2ca')
 #set_box_color(bpu, '#a6bddb')
 #set_box_color(bpv, '#2b8cbe')
@@ -63,8 +63,8 @@ set_box_color(bpr, '#2C7BB6')
 # draw temporary red and blue lines and use them to create a legend
 plt.plot([], c='#D7191C', label='10x10')
 plt.plot([], c='#2C7BB6', label='12x12')
-#plt.plot([], c='#2ca25f', label='ABC3')
-#plt.plot([], c='#8856a7', label='ABC4')
+plt.plot([], c='#2ca25f', label='14x14')
+plt.plot([], c='#8856a7', label='16x16')
 #plt.plot([], c='#43a2ca', label='ABC5')
 #plt.plot([], c='#a6bddb', label='ABC6')
 #plt.plot([], c='#2b8cbe', label='ABC7')
