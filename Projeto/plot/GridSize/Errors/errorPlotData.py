@@ -6,7 +6,7 @@ data_b = [[19,23,21,24,16,23,22,21,23,20]]
 data_c = [[18,16,17,18,19,21,18,21,21,22]]
 data_d = [[20,23,20,19,19,24,18,17,18,19]]
 data_e = [[21,16,19,17,18,16,18,17,14,18]]
-#data_f = [[2,4,6]]
+data_f = [[16,18,16,15,19,18,19,16,14,18]]
 #data_g = [[1,2,5]]
 #data_h = [[6,4,2]]
 #data_i = [[5,4,1]]
@@ -32,7 +32,7 @@ bpr = plt.boxplot(data_b, positions=np.array(range(len(data_b)))*2.0+0.5, sym=''
 bps = plt.boxplot(data_c, positions=np.array(range(len(data_c)))*2.0+2.0, sym='', widths=0.8)
 bpt = plt.boxplot(data_d, positions=np.array(range(len(data_d)))*2.0+3.6, sym='', widths=0.8)
 bpu = plt.boxplot(data_e, positions=np.array(range(len(data_e)))*2.0+5.2, sym='', widths=0.8)
-#bpv = plt.boxplot(data_f, positions=np.array(range(len(data_f)))*2.0+6.8 , sym='', widths=0.8)
+bpv = plt.boxplot(data_f, positions=np.array(range(len(data_f)))*2.0+6.8 , sym='', widths=0.8)
 #bpx = plt.boxplot(data_g, positions=np.array(range(len(data_g)))*2.0+8.4, sym='', widths=0.8)
 #bpw = plt.boxplot(data_h, positions=np.array(range(len(data_h)))*2.0+10.0, sym='', widths=0.8)
 #bpy = plt.boxplot(data_i, positions=np.array(range(len(data_i)))*2.0+11.6, sym='', widths=0.8)
@@ -48,7 +48,7 @@ set_box_color(bpr, '#2C7BB6')
 set_box_color(bps, '#2ca25f') 
 set_box_color(bpt, '#8856a7')
 set_box_color(bpu, '#43a2ca')
-#set_box_color(bpv, '#2b8cbe')
+set_box_color(bpv, '#a6bddb')
 #set_box_color(bpx, '#1c9099')
 #set_box_color(bpw, '#dd1c77')
 #set_box_color(bpy, '#addd8e')
@@ -65,7 +65,7 @@ plt.plot([], c='#2C7BB6', label='12x12')
 plt.plot([], c='#2ca25f', label='14x14')
 plt.plot([], c='#8856a7', label='16x16')
 plt.plot([], c='#43a2ca', label='18x18')
-#plt.plot([], c='#a6bddb', label='ABC6')
+plt.plot([], c='#a6bddb', label='20x20')
 #plt.plot([], c='#2b8cbe', label='ABC7')
 #plt.plot([], c='#1c9099', label='ABC8')
 #plt.plot([], c='#dd1c77', label='ABC9')
@@ -75,7 +75,7 @@ plt.plot([], c='#43a2ca', label='18x18')
 #plt.plot([], c='#636363', label='ABC13')
 #plt.plot([], c='#e34a33', label='ABC14')
 #plt.plot([], c='#fdbb84', label='ABC15')
-#plt.plot([], c='#9ebcda', label='ABC16')
+
 plt.legend()
 
 plt.xticks(range(0, len(ticks) * 2, 2), ticks)
