@@ -8,7 +8,7 @@ data_d = [[0.9397,0.9403,0.9392,0.9477,0.9434,0.9424,0.9487,0.9434,0.9424,0.944]
 data_e = [[0.9445,0.9556,0.9514,0.9567,0.9503,0.9493,0.9482,0.9477,0.9641,0.9487]]
 data_f = [[0.9641,0.9567,0.9582,0.9593,0.9535, 0.9487,0.9556,0.9619,0.9535,0.953]]
 data_g = [[0.9561,0.9619,0.9625,0.9672,0.9609,0.9567,0.9556,0.9598,0.9598,0.9572]]
-#data_h = [[6,4,2]]
+data_h = [[0.9609,0.9582,0.9688,0.9635,0.9651,0.9646,0.9588,0.9667,0.9598,0.9593]]
 #data_i = [[5,4,1]]
 #data_j = [[4,5,3]]
 #data_k = [[3,5,6]]
@@ -34,7 +34,7 @@ bpt = plt.boxplot(data_d, positions=np.array(range(len(data_d)))*2.0+3.6, sym=''
 bpu = plt.boxplot(data_e, positions=np.array(range(len(data_e)))*2.0+5.2, sym='', widths=0.8)
 bpv = plt.boxplot(data_f, positions=np.array(range(len(data_f)))*2.0+6.8 , sym='', widths=0.8)
 bpx = plt.boxplot(data_g, positions=np.array(range(len(data_g)))*2.0+8.4, sym='', widths=0.8)
-#bpw = plt.boxplot(data_h, positions=np.array(range(len(data_h)))*2.0+10.0, sym='', widths=0.8)
+bpw = plt.boxplot(data_h, positions=np.array(range(len(data_h)))*2.0+10.0, sym='', widths=0.8)
 #bpy = plt.boxplot(data_i, positions=np.array(range(len(data_i)))*2.0+11.6, sym='', widths=0.8)
 #bpz = plt.boxplot(data_j, positions=np.array(range(len(data_j)))*2.0+13.2, sym='', widths=0.8)
 #bpa = plt.boxplot(data_k, positions=np.array(range(len(data_k)))*2.0+14.8, sym='', widths=0.8)
@@ -50,7 +50,7 @@ set_box_color(bpt, '#8856a7')
 set_box_color(bpu, '#43a2ca')
 set_box_color(bpv, '#a6bddb')
 set_box_color(bpx, '#1c9099')
-#set_box_color(bpw, '#dd1c77')
+set_box_color(bpw, '#dd1c77')
 #set_box_color(bpy, '#addd8e')
 #set_box_color(bpz, '#99d8c9')
 #set_box_color(bpa, '#fa9fb5')
@@ -66,15 +66,15 @@ plt.plot([], c='#2ca25f', label='14x14')
 plt.plot([], c='#8856a7', label='16x16')
 plt.plot([], c='#43a2ca', label='18x18')
 plt.plot([], c='#a6bddb', label='20x20')
-plt.plot([], c='#2b8cbe', label='22x22')
-#plt.plot([], c='#1c9099', label='ABC8')
-#plt.plot([], c='#dd1c77', label='ABC9')
-#plt.plot([], c='#addd8e', label='ABC10')
-#plt.plot([], c='#99d8c9', label='ABC11')
-#plt.plot([], c='#fa9fb5', label='ABC12')
-#plt.plot([], c='#636363', label='ABC13')
-#plt.plot([], c='#e34a33', label='ABC14')
-#plt.plot([], c='#fdbb84', label='ABC15')
+plt.plot([], c='#1c9099', label='22x22')
+plt.plot([], c='#dd1c77', label='24x24')
+#plt.plot([], c='#addd8e', label='ABC9')
+#plt.plot([], c='#99d8c9', label='ABC10')
+#plt.plot([], c='#fa9fb5', label='ABC11')
+#plt.plot([], c='#636363', label='ABC12')
+#plt.plot([], c='#e34a33', label='ABC13')
+#plt.plot([], c='#fdbb84', label='ABC14')
+#plt.plot([], c='#', label='ABC15')
 plt.legend()
 
 plt.xticks(range(0, len(ticks) * 2, 2), ticks)
