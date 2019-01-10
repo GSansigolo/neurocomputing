@@ -9,10 +9,10 @@ data_e = [[21,16,19,17,18,16,18,17,14,18]]
 data_f = [[16,18,16,15,19,18,19,16,14,18]]
 data_g = [[21,15,17,14,15,15,19,19,17,18]]
 data_h = [[15,18,16,19,16,16,18,18,20,19]]
-#data_i = [[5,4,1]]
-#data_j = [[4,5,3]]
-#data_k = [[3,5,6]]
-#data_l = [[2,3,6]]
+data_i = [[18,21,16,14,16,17,17,19,11,14]]
+data_j = [[17,19,11,15,15,17,16,17,20,21]]
+data_k = [[14,16,16,16,15,17,15,15,17,18]]
+data_l = [[14]]
 #data_m = [[3,1,5]]
 #data_n = [[4,1,3]]
 #data_o = [[4,1,2]]
@@ -35,10 +35,10 @@ bpu = plt.boxplot(data_e, positions=np.array(range(len(data_e)))*2.0+5.2, sym=''
 bpv = plt.boxplot(data_f, positions=np.array(range(len(data_f)))*2.0+6.8 , sym='', widths=0.8)
 bpx = plt.boxplot(data_g, positions=np.array(range(len(data_g)))*2.0+8.4, sym='', widths=0.8)
 bpw = plt.boxplot(data_h, positions=np.array(range(len(data_h)))*2.0+10.0, sym='', widths=0.8)
-#bpy = plt.boxplot(data_i, positions=np.array(range(len(data_i)))*2.0+11.6, sym='', widths=0.8)
-#bpz = plt.boxplot(data_j, positions=np.array(range(len(data_j)))*2.0+13.2, sym='', widths=0.8)
-#bpa = plt.boxplot(data_k, positions=np.array(range(len(data_k)))*2.0+14.8, sym='', widths=0.8)
-#bpb = plt.boxplot(data_l, positions=np.array(range(len(data_l)))*2.0+16.4, sym='', widths=0.8)
+bpy = plt.boxplot(data_i, positions=np.array(range(len(data_i)))*2.0+11.6, sym='', widths=0.8)
+bpz = plt.boxplot(data_j, positions=np.array(range(len(data_j)))*2.0+13.2, sym='', widths=0.8)
+bpa = plt.boxplot(data_k, positions=np.array(range(len(data_k)))*2.0+14.8, sym='', widths=0.8)
+bpb = plt.boxplot(data_l, positions=np.array(range(len(data_l)))*2.0+16.4, sym='', widths=0.8)
 #bpc = plt.boxplot(data_m, positions=np.array(range(len(data_m)))*2.0+18.0, sym='', widths=0.8)
 #bpd = plt.boxplot(data_n, positions=np.array(range(len(data_n)))*2.0+19.6, sym='', widths=0.8)
 #bpe = plt.boxplot(data_o, positions=np.array(range(len(data_o)))*2.0+21.2, sym='', widths=0.8)
@@ -51,10 +51,10 @@ set_box_color(bpu, '#43a2ca')
 set_box_color(bpv, '#a6bddb')
 set_box_color(bpx, '#1c9099')
 set_box_color(bpw, '#dd1c77')
-#set_box_color(bpy, '#addd8e')
-#set_box_color(bpz, '#99d8c9')
-#set_box_color(bpa, '#fa9fb5')
-#set_box_color(bpb, '#636363')
+set_box_color(bpy, '#000080')
+set_box_color(bpz, '#00cccc')
+set_box_color(bpa, '#fa9fb5')
+set_box_color(bpb, '#636363')
 #set_box_color(bpc, '#e34a33')
 #set_box_color(bpd, '#fdbb84')
 #set_box_color(bpe, '#9ebcda')
@@ -68,10 +68,10 @@ plt.plot([], c='#43a2ca', label='18x18')
 plt.plot([], c='#a6bddb', label='20x20')
 plt.plot([], c='#1c9099', label='22x22')
 plt.plot([], c='#dd1c77', label='24x24')
-#plt.plot([], c='#addd8e', label='ABC9')
-#plt.plot([], c='#99d8c9', label='ABC10')
-#plt.plot([], c='#fa9fb5', label='ABC11')
-#plt.plot([], c='#636363', label='ABC12')
+plt.plot([], c='#000080', label='26x26')
+plt.plot([], c='#00cccc', label='28x28')
+plt.plot([], c='#fa9fb5', label='30x30')
+plt.plot([], c='#636363', label='32x32')
 #plt.plot([], c='#e34a33', label='ABC13')
 #plt.plot([], c='#fdbb84', label='ABC14')
 #plt.plot([], c='#', label='ABC15')
