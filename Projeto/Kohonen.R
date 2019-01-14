@@ -15,13 +15,13 @@ write.csv(time_series.ts, file = "time_seriests.csv")
 #sourceCpp(paste(path.package("sits"), "inst/Distances/distance.cpp", sep = "/"))
 
 #Create cluster with Self-organizing maps (kohonen)
-# 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 28, 30, 32, 34
+# 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 28, 30, 32, 34, 36, 38
 koh <-
     sits::sits_kohonen(
         data.tb,
         time_series.ts,
-        grid_xdim = 32,
-        grid_ydim = 32,
+        grid_xdim = 36,
+        grid_ydim = 36,
         rlen = 100,
         dist.fcts = "euclidean",
         neighbourhood.fct = "gaussian"

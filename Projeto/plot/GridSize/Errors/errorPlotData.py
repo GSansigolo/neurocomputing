@@ -4,7 +4,7 @@ import numpy as np
 data_a = [[20,20,21,18,16,23,22,19,19,16]]
 data_b = [[19,23,21,24,16,23,22,21,23,20]]
 data_c = [[18,16,17,18,19,21,18,21,21,22]]
-data_d = [[20,23,20,19,19,24,18,17,18,19]]
+data_d = [[20,22,22,19,19,23,18,17,18,19]]
 data_e = [[21,16,19,17,18,16,18,17,14,18]]
 data_f = [[16,18,16,15,19,18,19,16,14,18]]
 data_g = [[21,15,17,14,15,15,19,19,17,18]]
@@ -12,9 +12,9 @@ data_h = [[15,18,16,19,16,16,18,18,20,19]]
 data_i = [[18,21,16,14,16,17,17,19,11,14]]
 data_j = [[17,19,11,15,15,17,16,17,20,21]]
 data_k = [[14,16,16,16,15,17,15,15,17,18]]
-data_l = [[14]]
-#data_m = [[3,1,5]]
-#data_n = [[4,1,3]]
+data_l = [[14,16,15,15,17,15,16,12,17,12]]
+data_m = [[14,16,16,14,16,16,13,14,15,17]]
+data_n = [[16,13,17,14,11,14,13,12]]
 #data_o = [[4,1,2]]
 
 ticks = ['', '', '', '','', '', '', '','', '', '', '', '', '']
@@ -39,8 +39,8 @@ bpy = plt.boxplot(data_i, positions=np.array(range(len(data_i)))*2.0+11.6, sym='
 bpz = plt.boxplot(data_j, positions=np.array(range(len(data_j)))*2.0+13.2, sym='', widths=0.8)
 bpa = plt.boxplot(data_k, positions=np.array(range(len(data_k)))*2.0+14.8, sym='', widths=0.8)
 bpb = plt.boxplot(data_l, positions=np.array(range(len(data_l)))*2.0+16.4, sym='', widths=0.8)
-#bpc = plt.boxplot(data_m, positions=np.array(range(len(data_m)))*2.0+18.0, sym='', widths=0.8)
-#bpd = plt.boxplot(data_n, positions=np.array(range(len(data_n)))*2.0+19.6, sym='', widths=0.8)
+bpc = plt.boxplot(data_m, positions=np.array(range(len(data_m)))*2.0+18.0, sym='', widths=0.8)
+bpd = plt.boxplot(data_n, positions=np.array(range(len(data_n)))*2.0+19.6, sym='', widths=0.8)
 #bpe = plt.boxplot(data_o, positions=np.array(range(len(data_o)))*2.0+21.2, sym='', widths=0.8)
 
 set_box_color(bpl, '#D7191C') 
@@ -55,8 +55,8 @@ set_box_color(bpy, '#000080')
 set_box_color(bpz, '#00cccc')
 set_box_color(bpa, '#fa9fb5')
 set_box_color(bpb, '#636363')
-#set_box_color(bpc, '#e34a33')
-#set_box_color(bpd, '#fdbb84')
+set_box_color(bpc, '#e34a33')
+set_box_color(bpd, '#fdbb84')
 #set_box_color(bpe, '#9ebcda')
 
 # draw temporary red and blue lines and use them to create a legend
@@ -72,9 +72,9 @@ plt.plot([], c='#000080', label='26x26')
 plt.plot([], c='#00cccc', label='28x28')
 plt.plot([], c='#fa9fb5', label='30x30')
 plt.plot([], c='#636363', label='32x32')
-#plt.plot([], c='#e34a33', label='ABC13')
-#plt.plot([], c='#fdbb84', label='ABC14')
-#plt.plot([], c='#', label='ABC15')
+plt.plot([], c='#e34a33', label='34x34')
+plt.plot([], c='#fdbb84', label='36x36')
+#plt.plot([], c='#9ebcda', label='ABC15')
 
 plt.legend()
 

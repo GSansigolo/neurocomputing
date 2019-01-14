@@ -12,9 +12,9 @@ data_h = [[0.9609,0.9582,0.9688,0.9635,0.9651,0.9646,0.9588,0.9667,0.9598,0.9593
 data_i = [[0.963,0.9567,0.963,0.9678,0.9662, 0.9704,0.9688,0.9593,0.9656,0.9651]]
 data_j = [[0.9672,0.9683,0.9704,0.972,0.972,0.9678,0.9752,0.9604,0.9651,0.9683]]
 data_k = [[0.972,0.9651,0.9672,0.9704,0.973,0.9736,0.9699,0.9693,0.9704,0.9699]]
-data_l = [[0.9715]]
-#data_m = [[3,1,5]]
-#data_n = [[4,1,3]]
+data_l = [[0.9715,0.9704,0.973,0.9741,0.9683,0.9746,0.9783,0.9741,0.972,0.9767]]
+data_m = [[0.9741,0.972,0.9741,0.973,0.972,0.9704,0.9757,0.9693,0.9757,0.9746]]
+data_n = [[0.9767,0.9736,0.9715,0.9762,0.9762,0.9804,0.9693]]
 #data_o = [[4,1,2]]
 
 ticks = ['', '', '', '','', '', '', '','', '', '', '', '', '']
@@ -39,8 +39,8 @@ bpy = plt.boxplot(data_i, positions=np.array(range(len(data_i)))*2.0+11.6, sym='
 bpz = plt.boxplot(data_j, positions=np.array(range(len(data_j)))*2.0+13.2, sym='', widths=0.8)
 bpa = plt.boxplot(data_k, positions=np.array(range(len(data_k)))*2.0+14.8, sym='', widths=0.8)
 bpb = plt.boxplot(data_l, positions=np.array(range(len(data_l)))*2.0+16.4, sym='', widths=0.8)
-#bpc = plt.boxplot(data_m, positions=np.array(range(len(data_m)))*2.0+18.0, sym='', widths=0.8)
-#bpd = plt.boxplot(data_n, positions=np.array(range(len(data_n)))*2.0+19.6, sym='', widths=0.8)
+bpc = plt.boxplot(data_m, positions=np.array(range(len(data_m)))*2.0+18.0, sym='', widths=0.8)
+bpd = plt.boxplot(data_n, positions=np.array(range(len(data_n)))*2.0+19.6, sym='', widths=0.8)
 #bpe = plt.boxplot(data_o, positions=np.array(range(len(data_o)))*2.0+21.2, sym='', widths=0.8)
 
 set_box_color(bpl, '#D7191C') 
@@ -55,8 +55,8 @@ set_box_color(bpy, '#000080')
 set_box_color(bpz, '#00cccc')
 set_box_color(bpa, '#fa9fb5')
 set_box_color(bpb, '#636363')
-#set_box_color(bpc, '#e34a33')
-#set_box_color(bpd, '#fdbb84')
+set_box_color(bpc, '#e34a33')
+set_box_color(bpd, '#fdbb84')
 #set_box_color(bpe, '#9ebcda')
 
 # draw temporary red and blue lines and use them to create a legend
@@ -72,13 +72,13 @@ plt.plot([], c='#000080', label='26x26')
 plt.plot([], c='#00cccc', label='28x28')
 plt.plot([], c='#fa9fb5', label='30x30')
 plt.plot([], c='#636363', label='32x32')
-#plt.plot([], c='#e34a33', label='ABC13')
-#plt.plot([], c='#fdbb84', label='ABC14')
-#plt.plot([], c='#', label='ABC15')
+plt.plot([], c='#e34a33', label='34x34')
+plt.plot([], c='#fdbb84', label='36x36')
+#plt.plot([], c='#9ebcda', label='ABC15')
 plt.legend()
 
 plt.xticks(range(0, len(ticks) * 2, 2), ticks)
 plt.xlim(-2, len(ticks)*2)
-plt.ylim(0.91, 0.98)
+plt.ylim(0.91, 0.99)
 plt.tight_layout()
 plt.savefig('boxcompare.png')
