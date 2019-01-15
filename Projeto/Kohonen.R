@@ -20,11 +20,11 @@ koh <-
     sits::sits_kohonen(
         data.tb,
         time_series.ts,
-        grid_xdim = 36,
-        grid_ydim = 36,
+        grid_xdim = 34,
+        grid_ydim = 34,
         rlen = 100,
-        dist.fcts = "euclidean",
-        neighbourhood.fct = "gaussian"
+        dist.fcts = "manhattan",
+        neighbourhood.fct = "bubble"
     )
 
 #Analyze the mixture between groups and extract informations about confusion matrix

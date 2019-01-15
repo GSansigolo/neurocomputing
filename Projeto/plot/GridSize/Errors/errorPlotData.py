@@ -14,8 +14,8 @@ data_j = [[17,19,11,15,15,17,16,17,20,21]]
 data_k = [[14,16,16,16,15,17,15,15,17,18]]
 data_l = [[14,16,15,15,17,15,16,12,17,12]]
 data_m = [[14,16,16,14,16,16,13,14,15,17]]
-data_n = [[16,13,17,14,11,14,13,12]]
-#data_o = [[4,1,2]]
+data_n = [[16,13,17,14,11,14,13,12,12,12]]
+data_o = [[15,13,15,16,11,12,16,13,15,13]]
 
 ticks = ['', '', '', '','', '', '', '','', '', '', '', '', '']
 
@@ -41,7 +41,7 @@ bpa = plt.boxplot(data_k, positions=np.array(range(len(data_k)))*2.0+14.8, sym='
 bpb = plt.boxplot(data_l, positions=np.array(range(len(data_l)))*2.0+16.4, sym='', widths=0.8)
 bpc = plt.boxplot(data_m, positions=np.array(range(len(data_m)))*2.0+18.0, sym='', widths=0.8)
 bpd = plt.boxplot(data_n, positions=np.array(range(len(data_n)))*2.0+19.6, sym='', widths=0.8)
-#bpe = plt.boxplot(data_o, positions=np.array(range(len(data_o)))*2.0+21.2, sym='', widths=0.8)
+bpe = plt.boxplot(data_o, positions=np.array(range(len(data_o)))*2.0+21.2, sym='', widths=0.8)
 
 set_box_color(bpl, '#D7191C') 
 set_box_color(bpr, '#2C7BB6')
@@ -57,7 +57,7 @@ set_box_color(bpa, '#fa9fb5')
 set_box_color(bpb, '#636363')
 set_box_color(bpc, '#e34a33')
 set_box_color(bpd, '#fdbb84')
-#set_box_color(bpe, '#9ebcda')
+set_box_color(bpe, '#9ebcda')
 
 # draw temporary red and blue lines and use them to create a legend
 plt.plot([], c='#D7191C', label='10x10')
@@ -74,7 +74,7 @@ plt.plot([], c='#fa9fb5', label='30x30')
 plt.plot([], c='#636363', label='32x32')
 plt.plot([], c='#e34a33', label='34x34')
 plt.plot([], c='#fdbb84', label='36x36')
-#plt.plot([], c='#9ebcda', label='ABC15')
+plt.plot([], c='#9ebcda', label='38x38')
 
 plt.legend()
 
